@@ -4,4 +4,4 @@ Desafios curso Full Cycle da Code Education
 
 ## Desafio Go
 
-lailafdias/codeeducation
+Imagem no Docker Hub: lailafdias/codeeducation
