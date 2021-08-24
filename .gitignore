@@ -1,2 +1,3 @@
 Docker/Node/node/node_modules/*
 CI/node_modules/*
+CI/coverage/*
