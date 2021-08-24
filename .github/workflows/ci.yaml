@@ -1,0 +1,16 @@
+name: ci-nodejs-workflow
+on: [push]
+defaults:
+  run:
+    working-directory: CI
+jobs:
+  check-applications:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '15'
+      - run: npm install
+      - run: npm test
+      
