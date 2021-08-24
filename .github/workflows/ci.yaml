@@ -1,5 +1,5 @@
 name: ci-nodejs-workflow
-on: 
+on:
   pull_request:
     branches:
       - develop
@@ -16,4 +16,10 @@ jobs:
           node-version: '15'
       - run: npm install
       - run: npm test
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
       
