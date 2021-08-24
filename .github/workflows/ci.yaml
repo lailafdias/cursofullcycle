@@ -1,8 +1,5 @@
 name: ci-nodejs-workflow
-on: 
-  pull_request:
-    branches:
-      - develop
+on: [push]
 defaults:
   run:
     working-directory: CI
